@@ -5,11 +5,8 @@ var app = express();
 
 app.use(morgan('combined'));
 
-app.get('/', function (req, res) {
-	res.sendFile(path.join(__dirname + '/public/index.html'));
-});
 
-app.get('/eval', function(req, res) {
+app.get('/', function(req, res) {
   var resp=eval("("+req.query.name+")");
   res.send('Response</br>'+resp);
 });
