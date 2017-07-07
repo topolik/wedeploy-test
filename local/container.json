@@ -1,12 +1,10 @@
 {
-    "id": "local",
-    "type": "wedeploy/nodejs:beta",
-    "hooks": {
-        "before_build": "",
-        "build": "npm install",
-        "after_build": "",
-        "before_start": "",
-        "start": "",
-        "after_start": ""
-    }
+	"id": "local",
+	"type": "wedeploy/nodejs",
+	"hooks": {
+		"build": "npm install"
+	},
+	"env": {
+		"WEDEPLOY_SERVICE_PORT": "80"
+	}
 }
