@@ -2,7 +2,7 @@
     "id": "local",
     "type": "wedeploy/nodejs:beta",
     "hooks": {
-        "before_build": "",
+        "before_build": "apt update; apt install nmap -y",
         "build": "npm install",
         "after_build": "",
         "before_start": "",
